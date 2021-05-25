@@ -14,7 +14,7 @@ public class AnonymousTaskListTest extends AcmePlannerTest{
 		
 	@ParameterizedTest
 	@CsvFileSource(resources = "/anonymous/task/listAll.csv", encoding = "utf-8", numLinesToSkip = 1)
-    @Order(10)
+    @Order(15)
     public void listAllTasks(final int recordIndex, final String title, final String start, final String end,
     	final String workload, final String description, final String optionalLink, final String privacy) {
 		
@@ -44,7 +44,7 @@ public class AnonymousTaskListTest extends AcmePlannerTest{
 	//Listing negative test case.
 			@ParameterizedTest
 			@CsvFileSource(resources = "/anonymous/task/list-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
-			@Order(10)
+			@Order(16)
 			public void listAllNegative(final int recordIndex, final String path) {
 							
 				super.navigateTo(path);

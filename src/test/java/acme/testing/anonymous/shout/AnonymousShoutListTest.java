@@ -25,7 +25,7 @@ public class AnonymousShoutListTest extends AcmePlannerTest{
 	//Listing negative test case.
 	@ParameterizedTest
 	@CsvFileSource(resources = "/anonymous/shout/listAll-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
-	@Order(10)
+	@Order(11)
 	public void listAllNegative(final int recordIndex, final String path) {
 		super.signIn("administrator", "administrator");
 		super.navigateTo(path);

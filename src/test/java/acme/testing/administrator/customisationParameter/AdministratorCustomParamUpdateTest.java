@@ -12,7 +12,7 @@ public class AdministratorCustomParamUpdateTest extends AcmePlannerTest {
 	//Positive update test case. Adds a new spamword and a new threshold.
 	@ParameterizedTest
 	@CsvFileSource(resources = "/administrator/customisationParameter/update-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
-	@Order(10)
+	@Order(23)
 	public void updatePositive(final int recordIndex, final String spamWords, final String threshold) {
 		super.signIn("administrator", "administrator");
 		
@@ -38,7 +38,7 @@ public class AdministratorCustomParamUpdateTest extends AcmePlannerTest {
 	//Negative Update test case. Tries to update three invalid thresholds (a negative, a four decimals and a greater than 100 one)
 	@ParameterizedTest
 	@CsvFileSource(resources = "/administrator/customisationParameter/update-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
-	@Order(10)
+	@Order(24)
 	public void updateNegative(final int recordIndex, final String spamWords, final String threshold) {
 		super.signIn("administrator", "administrator");
 		

@@ -1,2 +1,2 @@
-recordIndex,path
-0,/authenticated/task/list
+recordIndex,path,query
+0,/authenticated/task/show,id=24

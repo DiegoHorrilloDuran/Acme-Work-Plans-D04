@@ -12,8 +12,8 @@ public class ManagerTaskUpdateTest extends AcmePlannerTest {
 	//Update positive test case.
 	@ParameterizedTest
 	@CsvFileSource(resources = "/manager/task/update-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
-    @Order(10)
-	public void createPositive(final int recordIndex, final String title, final String start, final String end, final String workload, final String description) {
+    @Order(45)
+	public void updatePositive(final int recordIndex, final String title, final String start, final String end, final String workload, final String description, final String optionalLink) {
 		
 		super.signIn("manager01", "manager01");
 		
@@ -26,6 +26,7 @@ public class ManagerTaskUpdateTest extends AcmePlannerTest {
 		super.fillInputBoxIn("end", end);
 		super.fillInputBoxIn("workload", workload);
 		super.fillInputBoxIn("description", description);
+		super.fillInputBoxIn("optionalLink", optionalLink);
 		
 		super.clickOnSubmitButton("Update"); 
 		
@@ -42,6 +43,7 @@ public class ManagerTaskUpdateTest extends AcmePlannerTest {
 		super.checkInputBoxHasValue("end", end);
 		super.checkInputBoxHasValue("workload", workload);
 		super.checkInputBoxHasValue("description", description);
+		super.checkInputBoxHasValue("optionalLink", optionalLink);
 		
 		super.signOut();
 		
@@ -59,8 +61,8 @@ public class ManagerTaskUpdateTest extends AcmePlannerTest {
 	
 	@ParameterizedTest
 	@CsvFileSource(resources = "/manager/task/update-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
-    @Order(10)
-	public void createNegative(final int recordIndex, final String title, final String start, final String end, final String workload, final String description) {
+    @Order(46)
+	public void updateNegative(final int recordIndex, final String title, final String start, final String end, final String workload, final String description, final String optionalLink) {
 		
 		super.signIn("manager01", "manager01");
 		
@@ -73,6 +75,7 @@ public class ManagerTaskUpdateTest extends AcmePlannerTest {
 		super.fillInputBoxIn("end", end);
 		super.fillInputBoxIn("workload", workload);
 		super.fillInputBoxIn("description", description);
+		super.fillInputBoxIn("optionalLink", optionalLink);
 		
 		super.clickOnSubmitButton("Update"); 		
 		super.checkErrorsExist(); 		

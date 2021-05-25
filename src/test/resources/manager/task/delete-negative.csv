@@ -1,2 +1,2 @@
-recordIndex,title,start,end,workload,description
-0,Tarea 8,2021/09/05 18:00,2021/09/07 18:00,5.00,Esto es otra tarea
+recordIndex,path,query
+0,/manager/task/delete,id=17

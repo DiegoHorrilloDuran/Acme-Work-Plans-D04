@@ -12,7 +12,7 @@ public class AdministratorCustomParamListTest extends AcmePlannerTest {
 	//Listing positive test case.
 	@ParameterizedTest
 	@CsvFileSource(resources = "/administrator/customisationParameter/list-all.csv", encoding = "utf-8", numLinesToSkip = 1)
-	@Order(10)
+	@Order(20)
 	public void listAll(final int recordIndex, final String spamWords, final String threshold) {
 		super.signIn("administrator", "administrator");
 		
@@ -31,7 +31,7 @@ public class AdministratorCustomParamListTest extends AcmePlannerTest {
 	//Listing negative test case.
 		@ParameterizedTest
 		@CsvFileSource(resources = "/administrator/customisationParameter/list-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
-		@Order(10)
+		@Order(21)
 		public void listAllNegative(final int recordIndex, final String path) {
 						
 			super.navigateTo(path);

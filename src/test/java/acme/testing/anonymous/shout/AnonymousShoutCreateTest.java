@@ -12,7 +12,7 @@ public class AnonymousShoutCreateTest extends AcmePlannerTest {
 	//Create Positive test case (all filled correctly and all filled except information).
 	@ParameterizedTest
 	@CsvFileSource(resources = "/anonymous/shout/create-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
-    @Order(10)
+    @Order(13)
     public void createPositive(final int recordIndex, final String author, final String text, final String info) {
 		
 		super.clickOnMenu("Anonymous", "New shout");
@@ -34,7 +34,7 @@ public class AnonymousShoutCreateTest extends AcmePlannerTest {
 	 * all mistakes at the same time)*/
 	@ParameterizedTest
 	@CsvFileSource(resources = "/anonymous/shout/create-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
-	@Order(10)
+	@Order(14)
 	public void createNegative(final int recordIndex, final String author, final String text, final String info) {
 			
 		super.clickOnMenu("Anonymous", "New shout");
