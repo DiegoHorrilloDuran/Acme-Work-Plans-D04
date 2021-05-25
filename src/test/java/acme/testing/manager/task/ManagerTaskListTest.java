@@ -6,7 +6,6 @@ import org.junit.jupiter.params.provider.CsvFileSource;
 
 import acme.testing.AcmePlannerTest;
 
-//Aquí vamos a testear el mostrar el listado de todas las shouts disponibles
 public class ManagerTaskListTest extends AcmePlannerTest{
 	
 	@ParameterizedTest
@@ -14,6 +13,7 @@ public class ManagerTaskListTest extends AcmePlannerTest{
     @Order(10)
     public void listManagerTasks(final int recordIndex, final String title, final String start, 
     	final String end, final String workload, final String description, final String optionalLink, final String privacy) {
+		//Listing positive test case.
 		super.signIn("manager01","manager01");
 		super.clickOnMenu("Manager", "Manager tasks");
 		
@@ -34,9 +34,7 @@ public class ManagerTaskListTest extends AcmePlannerTest{
 		super.signOut();
 	}
 	
-	/*
-	TEST LIST NEGATIVO
-	*/
+	//Listing negative test case.
 	@ParameterizedTest
 	@CsvFileSource(resources = "/manager/task/list-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)

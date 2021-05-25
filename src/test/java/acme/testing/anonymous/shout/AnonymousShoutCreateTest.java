@@ -8,10 +8,8 @@ import acme.testing.AcmePlannerTest;
 
 public class AnonymousShoutCreateTest extends AcmePlannerTest {
 	
-	/*CASO POSITIVO
-	1. Todo relleno correctamente
-	2. Todo relleno excepto Información
-	 */
+
+	//Create Positive test case (all filled correctly and all filled except information).
 	@ParameterizedTest
 	@CsvFileSource(resources = "/anonymous/shout/create-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
     @Order(10)
@@ -27,13 +25,13 @@ public class AnonymousShoutCreateTest extends AcmePlannerTest {
 		
 	}
 	
-	/*CASO NEGATIVO
-	1. Longitud de Nombre incorrecto
-	2. Información rellenada incorrectamente
-	3. Texto rellenado con Spam
-	4. Texto superior al 10% de Spam
-	5. Todos los errores a la vez
-	 */		
+
+	/*Create Negative test case. Tries to update five invalid thresholds 
+	 * (invalid name length, 
+	 * information filled incorrectly, 
+	 * text filled with spam, 
+	 * text over 10% of spam and 
+	 * all mistakes at the same time)*/
 	@ParameterizedTest
 	@CsvFileSource(resources = "/anonymous/shout/create-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)

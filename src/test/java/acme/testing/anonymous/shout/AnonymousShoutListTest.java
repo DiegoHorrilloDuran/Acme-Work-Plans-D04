@@ -9,9 +9,7 @@ import acme.testing.AcmePlannerTest;
 
 public class AnonymousShoutListTest extends AcmePlannerTest{
 
-	/*
-	TEST LIST POSITIVO
-	*/
+	//Listing positive test case.
 	@ParameterizedTest
 	@CsvFileSource(resources = "/anonymous/shout/listAll.csv", encoding = "utf-8", numLinesToSkip = 1)
     @Order(10)
@@ -24,9 +22,7 @@ public class AnonymousShoutListTest extends AcmePlannerTest{
 		
 	}
 
-	/*
-	TEST LIST NEGATIVO
-	*/
+	//Listing negative test case.
 	@ParameterizedTest
 	@CsvFileSource(resources = "/anonymous/shout/listAll-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
